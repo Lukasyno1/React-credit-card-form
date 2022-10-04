@@ -1,0 +1,37 @@
+.credit-card-form {
+    margin: auto;
+    background-color: white;
+    border: solid black 1px;
+    width: 400px;
+    height: 450px;
+    padding: 100px 25px 25px 25px;
+
+    border-radius: 15px;
+
+    margin-top: -90px;
+
+    label {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+
+    .btn {
+        height: 45px;
+        width: 100%;
+    }
+
+    .credit-card-form-row {
+        margin-bottom: 5px;
+
+        .bottom-row-inputs {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    .expiration-date-inputs {
+        display: flex;
+        gap: 5px;
+        width: 200px;
+    }
+}
