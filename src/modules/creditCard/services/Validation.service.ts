@@ -2,7 +2,7 @@ export class InputStatus {
     errorCodes: string[] = [];
 
     get isValid() {
-        return this.errorCodes.length !== 0;
+        return this.errorCodes.length === 0;
     }
 
     addErrorCode = (errorCode: string) => this.errorCodes.push(errorCode);
@@ -28,7 +28,7 @@ export class ValidationService implements IValidationService {
     validateNumber(number: string): InputStatus {
         const inputStatus = new InputStatus();
         const numberCorrectLength = 16;
-        const nameWithNoSpaces = number.replaceAll(" ", "")
+        const nameWithNoSpaces = number.replace(/\s/g, '');
         const length = nameWithNoSpaces.length;
 
         if (length < numberCorrectLength) inputStatus.addErrorCode('Card number is too short');
